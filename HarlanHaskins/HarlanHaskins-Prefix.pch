@@ -1,0 +1,32 @@
+//
+// Prefix header for all source files of the 'HarlanHaskins' target in the 'HarlanHaskins' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIColor+HexString.h"
+#import "UILabel+TextKerning.h"
+#import "UIView+SizingOptions.h"
+#import "NSString+SubStringRange.h"
+
+#define kIsIphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define kIsWidescreen ([[UIScreen mainScreen] bounds ].size.height == 568)
+
+#define kSystemFontString @"Avenir"
+#define kBoldFontString @"Chalet-NewYorkNineteenSixty"
+#define kSystemFont [UIFont fontWithName:kSystemFontString size:16.0f]
+#define kBoldFont [UIFont fontWithName:kBoldFontString size:16.0f]
+
+
+#define redColor [UIColor colorFromHexString:@"#d32f27"]
+#define grayColor [UIColor colorFromHexString:@"#202020"]
+#define redShadowColor [UIColor colorWithWhite:0.4 alpha:0.4]
+#define whiteTextColor [UIColor colorWithWhite:0.937 alpha:1.0f]
+#endif
