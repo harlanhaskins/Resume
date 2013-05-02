@@ -12,7 +12,9 @@
 
 @end
 
-@implementation DetailViewController
+@implementation DetailViewController {
+    UIImageView *arrowImage;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,30 +25,49 @@
     return self;
 }
 
+-(id) initWithTitle:(NSString*)title {
+    self = [super init];
+    if (self) {
+        _headerTitle = title;
+    }
+    return self;
+}
+
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    UIImageView *arrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"] highlightedImage:[UIImage imageNamed:@"redarrow.png"]];
+    arrowImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"] highlightedImage:[UIImage imageNamed:@"redarrow.png"]];
     
-    arrow.transform = CGAffineTransformMakeRotation(M_PI);
-    CGRect arrowFrame = arrow.frame;
-        arrowFrame.origin.x = arrowFrame.origin.y = 10.0f;
-        arrow.frame = arrowFrame;
+    arrowImage.transform = CGAffineTransformMakeRotation(M_PI);
+    CGRect arrowImageViewFrame = arrowImage.frame;
+        arrowImageViewFrame.origin.x = arrowImageViewFrame.origin.y = kInset;
+    arrowImage.frame = arrowImageViewFrame;
     
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moveBack:)];
     
-    [arrow addGestureRecognizer:tapGestureRecognizer];
-    arrow.userInteractionEnabled = YES;
+    UILabel *itemLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
     
-    [self.view addSubview:arrow];
-    [self.view bringSubviewToFront:arrow];
+    itemLabel.font = [UIFont fontWithName:kSystemFontString size:20.0f];
+    itemLabel.backgroundColor = [UIColor clearColor];
+    itemLabel.shadowColor = translucentShadowColor;
+    itemLabel.shadowOffset = CGSizeMake(0, 1);
+    itemLabel.textAlignment = NSTextAlignmentCenter;
+    itemLabel.textColor = whiteTextColor;
+    itemLabel.text = self.headerTitle;
+    
+    [self.view addSubview:itemLabel];
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moveBack)];
+    
+    [arrowImage addGestureRecognizer:tapGestureRecognizer];
+    arrowImage.userInteractionEnabled = YES;
+    
     self.view.backgroundColor = grayColor;
+    [self.view addSubview:arrowImage];
+    [self.view bringSubviewToFront:arrowImage];
 }
 
--(void) moveBack:(id)sender {
-    UITapGestureRecognizer *tapGestureRecognizer = sender;
-    UIImageView *arrow = (UIImageView*)tapGestureRecognizer.view;
-    [arrow setHighlighted:YES];
+-(void) moveBack {
+    [arrowImage setHighlighted:YES];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

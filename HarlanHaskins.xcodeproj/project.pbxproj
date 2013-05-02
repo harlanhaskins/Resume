@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC058C1F1731E39700FB070E /* ExperienceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC058C1E1731E39700FB070E /* ExperienceViewController.m */; };
 		DC9B7FBF1729C729006EECBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9B7FBE1729C729006EECBA /* UIKit.framework */; };
 		DC9B7FC11729C729006EECBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9B7FC01729C729006EECBA /* Foundation.framework */; };
 		DC9B7FC31729C729006EECBA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9B7FC21729C729006EECBA /* CoreGraphics.framework */; };
@@ -28,9 +29,16 @@
 		DC9B7FFC1729E386006EECBA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9B7FFB1729E386006EECBA /* DetailViewController.m */; };
 		DCA00CB9172F53D2008E6012 /* BioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA00CB8172F53D2008E6012 /* BioViewController.m */; };
 		DCA00CBB172F5540008E6012 /* headshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCA00CBA172F5540008E6012 /* headshot.jpg */; };
-		DCA00CBE172F6290008E6012 /* ResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA00CBD172F6290008E6012 /* ResumeViewController.m */; };
 		DCA00CC2172F6402008E6012 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA00CC0172F6402008E6012 /* MainMenuViewController.m */; };
 		DCA00CC3172F6402008E6012 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA00CC1172F6402008E6012 /* MainMenuViewController.xib */; };
+		DCA00CD7172F6C14008E6012 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA00CD6172F6C14008E6012 /* SystemConfiguration.framework */; };
+		DCA00CDC172F70D0008E6012 /* ThanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA00CDB172F70D0008E6012 /* ThanksViewController.m */; };
+		DCB427D4173015C000F44115 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB427D3173015C000F44115 /* IntroViewController.m */; };
+		DCB427DE17301EF200F44115 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB427DC17301EF200F44115 /* InfoView.xib */; };
+		DCC8A69B17320DC900D52AD0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC8A69A17320DC900D52AD0 /* Icon.png */; };
+		DCC8A69D17320DCC00D52AD0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC8A69C17320DCC00D52AD0 /* Icon@2x.png */; };
+		DCCE9E811730A62A00947FC4 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE9E801730A62A00947FC4 /* ProgressView.m */; };
+		DCCE9E841730A83000947FC4 /* SkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE9E831730A83000947FC4 /* SkillsViewController.m */; };
 		DCF46F48172E3D710036A588 /* AppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF46F47172E3D710036A588 /* AppsViewController.m */; };
 		DCF46F4E172E43430036A588 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF46F4D172E43430036A588 /* PageViewController.m */; };
 		DCF46F53172E46FF0036A588 /* Alpha-Calc.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF46F4F172E46FF0036A588 /* Alpha-Calc.png */; };
@@ -44,7 +52,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC9B7FBB1729C729006EECBA /* HarlanHaskins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarlanHaskins.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC058C1D1731E39700FB070E /* ExperienceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperienceViewController.h; sourceTree = "<group>"; };
+		DC058C1E1731E39700FB070E /* ExperienceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceViewController.m; sourceTree = "<group>"; };
+		DC9B7FBB1729C729006EECBA /* Haskins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haskins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9B7FBE1729C729006EECBA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC9B7FC01729C729006EECBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC9B7FC21729C729006EECBA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,11 +85,21 @@
 		DCA00CB7172F53D2008E6012 /* BioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BioViewController.h; sourceTree = "<group>"; };
 		DCA00CB8172F53D2008E6012 /* BioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BioViewController.m; sourceTree = "<group>"; };
 		DCA00CBA172F5540008E6012 /* headshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = headshot.jpg; sourceTree = "<group>"; };
-		DCA00CBC172F6290008E6012 /* ResumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeViewController.h; sourceTree = "<group>"; };
-		DCA00CBD172F6290008E6012 /* ResumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeViewController.m; sourceTree = "<group>"; };
 		DCA00CBF172F6402008E6012 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		DCA00CC0172F6402008E6012 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		DCA00CC1172F6402008E6012 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
+		DCA00CD6172F6C14008E6012 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DCA00CDA172F70D0008E6012 /* ThanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThanksViewController.h; sourceTree = "<group>"; };
+		DCA00CDB172F70D0008E6012 /* ThanksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThanksViewController.m; sourceTree = "<group>"; };
+		DCB427D2173015C000F44115 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		DCB427D3173015C000F44115 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		DCB427DC17301EF200F44115 /* InfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
+		DCC8A69A17320DC900D52AD0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DCC8A69C17320DCC00D52AD0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		DCCE9E7F1730A62A00947FC4 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		DCCE9E801730A62A00947FC4 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		DCCE9E821730A83000947FC4 /* SkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillsViewController.h; sourceTree = "<group>"; };
+		DCCE9E831730A83000947FC4 /* SkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillsViewController.m; sourceTree = "<group>"; };
 		DCF46F46172E3D710036A588 /* AppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppsViewController.h; sourceTree = "<group>"; };
 		DCF46F47172E3D710036A588 /* AppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppsViewController.m; sourceTree = "<group>"; };
 		DCF46F4A172E41F90036A588 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
@@ -102,6 +122,7 @@
 			files = (
 				DC9B7FBF1729C729006EECBA /* UIKit.framework in Frameworks */,
 				DC9B7FEF1729D22F006EECBA /* QuartzCore.framework in Frameworks */,
+				DCA00CD7172F6C14008E6012 /* SystemConfiguration.framework in Frameworks */,
 				DC9B7FC11729C729006EECBA /* Foundation.framework in Frameworks */,
 				DC9B7FC31729C729006EECBA /* CoreGraphics.framework in Frameworks */,
 			);
@@ -113,6 +134,8 @@
 		DC9B7FB21729C729006EECBA = {
 			isa = PBXGroup;
 			children = (
+				DCC8A69C17320DCC00D52AD0 /* Icon@2x.png */,
+				DCC8A69A17320DC900D52AD0 /* Icon.png */,
 				DC9B7FC41729C729006EECBA /* HarlanHaskins */,
 				DC9B7FBD1729C729006EECBA /* Frameworks */,
 				DC9B7FBC1729C729006EECBA /* Products */,
@@ -122,7 +145,7 @@
 		DC9B7FBC1729C729006EECBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC9B7FBB1729C729006EECBA /* HarlanHaskins.app */,
+				DC9B7FBB1729C729006EECBA /* Haskins.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +153,7 @@
 		DC9B7FBD1729C729006EECBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCA00CD6172F6C14008E6012 /* SystemConfiguration.framework */,
 				DC9B7FEE1729D22F006EECBA /* QuartzCore.framework */,
 				DC9B7FBE1729C729006EECBA /* UIKit.framework */,
 				DC9B7FC01729C729006EECBA /* Foundation.framework */,
@@ -147,15 +171,24 @@
 				DCF46F47172E3D710036A588 /* AppsViewController.m */,
 				DCA00CB7172F53D2008E6012 /* BioViewController.h */,
 				DCA00CB8172F53D2008E6012 /* BioViewController.m */,
-				DCA00CBC172F6290008E6012 /* ResumeViewController.h */,
-				DCA00CBD172F6290008E6012 /* ResumeViewController.m */,
 				DC9B7FFA1729E386006EECBA /* DetailViewController.h */,
 				DC9B7FFB1729E386006EECBA /* DetailViewController.m */,
+				DC058C1D1731E39700FB070E /* ExperienceViewController.h */,
+				DC058C1E1731E39700FB070E /* ExperienceViewController.m */,
+				DCB427DC17301EF200F44115 /* InfoView.xib */,
+				DCB427D2173015C000F44115 /* IntroViewController.h */,
+				DCB427D3173015C000F44115 /* IntroViewController.m */,
 				DCA00CBF172F6402008E6012 /* MainMenuViewController.h */,
 				DCA00CC0172F6402008E6012 /* MainMenuViewController.m */,
 				DCA00CC1172F6402008E6012 /* MainMenuViewController.xib */,
 				DCF46F4A172E41F90036A588 /* PageViewController.h */,
 				DCF46F4D172E43430036A588 /* PageViewController.m */,
+				DCCE9E7F1730A62A00947FC4 /* ProgressView.h */,
+				DCCE9E801730A62A00947FC4 /* ProgressView.m */,
+				DCCE9E821730A83000947FC4 /* SkillsViewController.h */,
+				DCCE9E831730A83000947FC4 /* SkillsViewController.m */,
+				DCA00CDA172F70D0008E6012 /* ThanksViewController.h */,
+				DCA00CDB172F70D0008E6012 /* ThanksViewController.m */,
 				DC9B7FE81729CB16006EECBA /* TiltedView.h */,
 				DC9B7FE91729CB16006EECBA /* TiltedView.m */,
 				DC9B7FC51729C729006EECBA /* Supporting Files */,
@@ -216,9 +249,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC9B7FBA1729C729006EECBA /* HarlanHaskins */ = {
+		DC9B7FBA1729C729006EECBA /* Haskins */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC9B7FD81729C729006EECBA /* Build configuration list for PBXNativeTarget "HarlanHaskins" */;
+			buildConfigurationList = DC9B7FD81729C729006EECBA /* Build configuration list for PBXNativeTarget "Haskins" */;
 			buildPhases = (
 				DC9B7FB71729C729006EECBA /* Sources */,
 				DC9B7FB81729C729006EECBA /* Frameworks */,
@@ -228,9 +261,9 @@
 			);
 			dependencies = (
 			);
-			name = HarlanHaskins;
+			name = Haskins;
 			productName = HarlanHaskins;
-			productReference = DC9B7FBB1729C729006EECBA /* HarlanHaskins.app */;
+			productReference = DC9B7FBB1729C729006EECBA /* Haskins.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -254,7 +287,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC9B7FBA1729C729006EECBA /* HarlanHaskins */,
+				DC9B7FBA1729C729006EECBA /* Haskins */,
 			);
 		};
 /* End PBXProject section */
@@ -281,6 +314,9 @@
 				DCF46F5A172F131C0036A588 /* picl.png in Resources */,
 				DCA00CBB172F5540008E6012 /* headshot.jpg in Resources */,
 				DCA00CC3172F6402008E6012 /* MainMenuViewController.xib in Resources */,
+				DCB427DE17301EF200F44115 /* InfoView.xib in Resources */,
+				DCC8A69B17320DC900D52AD0 /* Icon.png in Resources */,
+				DCC8A69D17320DCC00D52AD0 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +338,12 @@
 				DCF46F48172E3D710036A588 /* AppsViewController.m in Sources */,
 				DCF46F4E172E43430036A588 /* PageViewController.m in Sources */,
 				DCA00CB9172F53D2008E6012 /* BioViewController.m in Sources */,
-				DCA00CBE172F6290008E6012 /* ResumeViewController.m in Sources */,
 				DCA00CC2172F6402008E6012 /* MainMenuViewController.m in Sources */,
+				DCA00CDC172F70D0008E6012 /* ThanksViewController.m in Sources */,
+				DCB427D4173015C000F44115 /* IntroViewController.m in Sources */,
+				DCCE9E811730A62A00947FC4 /* ProgressView.m in Sources */,
+				DCCE9E841730A83000947FC4 /* SkillsViewController.m in Sources */,
+				DC058C1F1731E39700FB070E /* ExperienceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +455,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC9B7FD81729C729006EECBA /* Build configuration list for PBXNativeTarget "HarlanHaskins" */ = {
+		DC9B7FD81729C729006EECBA /* Build configuration list for PBXNativeTarget "Haskins" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC9B7FD91729C729006EECBA /* Debug */,

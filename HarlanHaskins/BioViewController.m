@@ -26,12 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CGFloat inset = 10.0f;
     UIImageView *headshot = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"headshot.jpg"]];
-    [headshot setSizeProportionalToHeight:200.0f];
+    [headshot setSizeProportionalToHeight:150.0f];
     CGRect headshotFrame = headshot.frame;
-        headshotFrame.origin.x = 50.0f;
-        headshotFrame.origin.y = inset;
+        headshotFrame.origin.x = kInset;
+        headshotFrame.origin.y = 5 * kInset;
     headshot.frame = headshotFrame;
     [self.view addSubview:headshot];
     [self.view sendSubviewToBack:headshot];
@@ -39,15 +38,15 @@
     
     UITextView *infoTextView = [[UITextView alloc] init];
     CGRect infoTextFrame = CGRectZero;
-        infoTextFrame.origin.x = inset;
-        infoTextFrame.origin.y = headshotFrame.origin.y + headshotFrame.size.height + inset;
-        infoTextFrame.size.width = self.view.frame.size.width - infoTextFrame.origin.x - inset;
-        infoTextFrame.size.height = self.view.frame.size.height - infoTextFrame.origin.y - inset;
+        infoTextFrame.origin.x = kInset;
+        infoTextFrame.origin.y = headshotFrame.origin.y + headshotFrame.size.height + kInset;
+        infoTextFrame.size.width = self.view.frame.size.width - infoTextFrame.origin.x - kInset;
+        infoTextFrame.size.height = self.view.frame.size.height - infoTextFrame.origin.y - kInset;
     infoTextView.frame = infoTextFrame;
     infoTextView.backgroundColor = [UIColor colorWithWhite:0.3f alpha:0.5f];
     infoTextView.editable = NO;
     infoTextView.font = [UIFont fontWithName:kSystemFontString size:18.0f];
-    infoTextView.text = @"I am getting rid of this thing. It has caused me nothing but pride and self-respect. You're losing blood, aren't you? Probably, my socks are wet. The worst that could happen is that I could spill coffee all over this $3,000 suit. COME ON. What, so the guy we are meeting with can't even grow his own hair? COME ON!\n\nYou can control your bladder when you're dead! I don't care if it takes from now till the end of Shrimpfest. One of the guys told me to take my head out of my BOTTOM and get back to work…my BOTTOM! Hahahaha. And although the intervention didn't work, it turned into one of the Bluth family's better parties. ♪♪ Big yellow joint, big yellow joint, I'll meet you down at the big yellow joint. ♪♪ Great, now I'm gonna smell to high heaven like a tuna melt!\n\nYou're a good guy, mon frere. That means brother in French. I don't know how I know that. I took four years of Spanish. Stop it, stop it. This objectification of women has to stop. It's just Mom and whores. Saw this on the highway and almost blue myself. Hop on?";
+    infoTextView.text = @"Hello! My name is Harlan Haskins. I'm an 18 year old iOS and Web developer from Greenville, South Carolina. I've been fascinated with technology my whole life, but only recently have delved into programming. I'm graduating from Wade Hampton High School in June this year, and am slated to go to Rochester Institute of Technology in the fall. I'm currently working for Valley Rocket, LLC, a local iOS development company cofounded by my AP Computer Science teacher.\n\nI'd love to go to WWDC because I love iOS, Cocoa, and Objective-C, and I'm eager to learn as much as I can about this excellent platform. Thank you so much for your time!";
     infoTextView.textColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
     [self.view addSubview:infoTextView];
 }

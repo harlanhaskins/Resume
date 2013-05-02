@@ -18,15 +18,19 @@
 
 #define kIsIphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define kIsWidescreen ([[UIScreen mainScreen] bounds ].size.height == 568)
+#define kNamePlistURL [NSURL URLWithString:[(NSString*)NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingFormat:@"/Name.plist"]]
 
 #define kSystemFontString @"Avenir"
 #define kBoldFontString @"Chalet-NewYorkNineteenSixty"
 #define kSystemFont [UIFont fontWithName:kSystemFontString size:16.0f]
 #define kBoldFont [UIFont fontWithName:kBoldFontString size:16.0f]
 
+#define kInset 10.0f
+
 
 #define redColor [UIColor colorFromHexString:@"#d32f27"]
+#define redShadowColor [UIColor colorFromHexString:@"#8E2F27"]
 #define grayColor [UIColor colorFromHexString:@"#202020"]
-#define redShadowColor [UIColor colorWithWhite:0.4 alpha:0.4]
+#define translucentShadowColor [UIColor colorWithWhite:0.4 alpha:0.4]
 #define whiteTextColor [UIColor colorWithWhite:0.937 alpha:1.0f]
 #endif

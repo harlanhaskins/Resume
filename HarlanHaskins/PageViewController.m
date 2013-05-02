@@ -43,7 +43,7 @@
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.font = [UIFont fontWithName:@"Avenir"  size:38.0f];
     titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.shadowColor = redShadowColor;
+    titleLabel.shadowColor = translucentShadowColor;
     titleLabel.shadowOffset = CGSizeMake(0, 1);
     titleLabel.textColor = whiteTextColor;
     titleLabel.text = _appTitle;

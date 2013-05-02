@@ -1,6 +1,6 @@
 //
 //  MainMenuViewController.m
-//  HarlanHaskins
+//  Haskins
 //
 //  Created by Harlan Haskins on 4/27/13.
 //  Copyright (c) 2013 Valley Rocket. All rights reserved.
@@ -9,6 +9,9 @@
 #import "MainMenuViewController.h"
 #import "AppsViewController.h"
 #import "BioViewController.h"
+#import "ExperienceViewController.h"
+#import "ThanksViewController.h"
+#import "SkillsViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -58,7 +61,7 @@
          
         itemLabel.font = [UIFont fontWithName:kSystemFontString size:20.0f];
         itemLabel.backgroundColor = [UIColor clearColor];
-        itemLabel.shadowColor = redShadowColor;
+        itemLabel.shadowColor = translucentShadowColor;
         itemLabel.shadowOffset = CGSizeMake(0, 1);
         itemLabel.textColor = whiteTextColor;
         
@@ -73,13 +76,13 @@
                 itemLabel.text = @"SKILLS";
                 break;
             case 3:
-                itemLabel.text = @"EXPERIENCE";
+                itemLabel.text = @"WORK & EDUCATION";
                 break;
             case 4:
                 itemLabel.text = @"RÈSUMÈ";
                 break;
             case 5:
-                itemLabel.text = @"CONTACT";
+                itemLabel.text = @"SPECIAL THANKS";
                 break;
         }
         [cell.contentView addSubview:itemLabel];
@@ -92,26 +95,45 @@
     UIImageView *arrow = cell.contentView.subviews[0];
     [arrow setHighlighted:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    UIViewController *selectedController;
+    DetailViewController *selectedController;
+    NSString *title = [(UILabel*)cell.contentView.subviews[1] text];
     switch (indexPath.row) {
         case 0:
             selectedController = [[AppsViewController alloc] init];
             break;
         case 1:
-            selectedController = [[BioViewController alloc] init];
+            selectedController = [[BioViewController alloc] initWithTitle:title];
             break;
         case 2:
+            selectedController = [[SkillsViewController alloc] initWithTitle:title];
             break;
         case 3:
+            selectedController = [[ExperienceViewController alloc] initWithTitle:title];
             break;
         case 4:
+            [self openActionSheet];
             break;
         case 5:
+            selectedController = [[ThanksViewController alloc] initWithTitle:title];
             break;
     }
-    
     if (selectedController) {
         [self.navigationController pushViewController:selectedController animated:YES];
+    }
+}
+
+-(void) openActionSheet {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Open in Safari", nil];
+    [actionSheet showInView:self.view];
+}
+
+-(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (!buttonIndex) {
+        NSURL *url = [NSURL URLWithString:@"http://www.harlanhaskins.com/Resume.pdf"];
+        
+        if (![[UIApplication sharedApplication] openURL:url]) {
+            NSLog(@"%@%@", @"Failed to open url:", [url description]);
+        }
     }
 }
 
@@ -122,10 +144,11 @@
     [arrow setHighlighted:NO];
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _nameLabel.shadowColor = _infoLabel.shadowColor = redShadowColor;
+    _nameLabel.shadowColor = _infoLabel.shadowColor = translucentShadowColor;
     _nameLabel.textColor = _infoLabel.textColor = whiteTextColor;
     [_infoLabel setKerning:4.33];
     [self.view setBackgroundColor:grayColor];

@@ -1,5 +1,5 @@
 //
-//  ResumeViewController.h
+//  ThanksViewController.h
 //  HarlanHaskins
 //
 //  Created by Harlan Haskins on 4/29/13.
@@ -8,6 +8,6 @@
 
 #import "DetailViewController.h"
 
-@interface ResumeViewController : DetailViewController
+@interface ThanksViewController : DetailViewController
 
 @end

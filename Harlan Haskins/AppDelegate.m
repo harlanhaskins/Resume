@@ -1,14 +1,12 @@
 //
 //  AppDelegate.m
-//  HarlanHaskins
+//  Harlan Haskins
 //
-//  Created by Harlan Haskins on 4/25/13.
+//  Created by Harlan Haskins on 5/1/13.
 //  Copyright (c) 2013 Valley Rocket. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "MainMenuViewController.h"
-#import "IntroViewController.h"
 
 @implementation AppDelegate
 
@@ -17,22 +15,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    UINavigationController *navController;
-    
-    NSURL *url = kNamePlistURL;
-    NSData *data = [NSData dataWithContentsOfFile:url.path];
-
-    if (data) {
-        navController = [[UINavigationController alloc] initWithRootViewController:[[MainMenuViewController alloc] init]];
-    }
-    else {
-        navController = [[UINavigationController alloc] initWithRootViewController:[[IntroViewController alloc] init]];
-    }
-    
-    navController.navigationBarHidden = YES;
-    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

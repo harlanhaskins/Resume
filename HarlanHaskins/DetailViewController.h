@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
-
+@interface DetailViewController : UIViewController <UITextFieldDelegate>
+@property (strong, nonatomic) NSString *headerTitle;
+-(id) initWithTitle:(NSString*)title;
 @end
