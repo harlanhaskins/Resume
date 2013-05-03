@@ -76,6 +76,10 @@
     descriptionLabel.textColor = whiteTextColor;
     descriptionLabel.text = textArray[0];
     
+    if ([descriptionLabel.text isEqualToString:@"That Awkward Stage Theatre Project"]) {
+        descriptionLabel.font = [UIFont fontWithName:kSystemFontString size:18.0f];
+    }
+    
     UILabel *timeLabel = [[UILabel alloc] initWithFrame:descriptionLabel.frame];
     CGRect timeLabelFrame = timeLabel.frame;
     timeLabelFrame.origin.y += timeLabelFrame.size.height + 5.0f;

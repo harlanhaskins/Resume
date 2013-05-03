@@ -46,7 +46,7 @@
     infoTextView.backgroundColor = [UIColor colorWithWhite:0.3f alpha:0.5f];
     infoTextView.editable = NO;
     infoTextView.font = [UIFont fontWithName:kSystemFontString size:18.0f];
-    infoTextView.text = @"Hello! My name is Harlan Haskins. I'm an 18 year old iOS and Web developer from Greenville, South Carolina. I've been fascinated with technology my whole life, but only recently have delved into programming. I'm graduating from Wade Hampton High School in June this year, and am slated to go to Rochester Institute of Technology in the fall. I'm currently working for Valley Rocket, LLC, a local iOS development company cofounded by my AP Computer Science teacher.\n\nI'd love to go to WWDC because I love iOS, Cocoa, and Objective-C, and I'm eager to learn as much as I can about this excellent platform. Thank you so much for your time!";
+    infoTextView.text = @"Hello! My name is Harlan Haskins. I'm an 18 year old iOS and Web developer from Greenville, South Carolina. I've been fascinated with technology my whole life, but only recently have delved into programming. I'm graduating from Wade Hampton High School in June this year, and am slated to go to Rochester Institute of Technology in the fall. I'm currently working for Valley Rocket, LLC, a local iOS development company.\n\nI'd love to go to WWDC because I love iOS, Cocoa, and Objective-C, and I'm eager to learn as much as I can about this excellent platform. Thank you so much for your time!";
     infoTextView.textColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
     [self.view addSubview:infoTextView];
 }

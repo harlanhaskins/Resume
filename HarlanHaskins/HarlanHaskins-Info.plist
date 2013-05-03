@@ -37,11 +37,6 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Chalet_London_Nineteen_Sixty.otf</string>
-		<string>Chalet_New_York_Nineteen_Sixty.ttf</string>
-	</array>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>

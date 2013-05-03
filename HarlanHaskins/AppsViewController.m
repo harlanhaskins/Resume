@@ -60,7 +60,7 @@
     }
     
     CGRect pageViewControllerFrame = _pageViewController.view.frame;
-        pageViewControllerFrame.size.height -= 22.0f;
+    pageViewControllerFrame.size.height -= 22.0f;
     _pageViewController.view.frame = pageViewControllerFrame;
     
     [self addChildViewController:_pageViewController];
@@ -68,12 +68,10 @@
     [self.view sendSubviewToBack:_pageViewController.view];
 }
 
--(void) pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers {
-    if (index < [(PageViewController*)pendingViewControllers[0] tag]) {
-        index++;
-    }
-    else {
-        index--;
+-(void) pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+    if (completed) {
+        PageViewController *currentViewController = (PageViewController*)pageViewController.viewControllers[0];
+        index = currentViewController.tag;
     }
 }
 
